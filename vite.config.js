@@ -3,8 +3,9 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
 export default defineConfig({
-    base: './'
+  base: '',
   plugins: [
+    react(),
     VitePWA({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.svg'],
@@ -28,5 +29,6 @@ export default defineConfig({
           }
         ]
       }
-    }),react()],
+    })
+  ]
 });
